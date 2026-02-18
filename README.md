@@ -2,6 +2,4 @@
 
 Writing a sentence to test.
 
-Making a checkbox
-[x]
-[ ] 
+Making a checkbox -[x] -[ ] 
