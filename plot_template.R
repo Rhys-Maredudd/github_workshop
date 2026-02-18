@@ -8,6 +8,9 @@ library(ggtext)
 
 # plot itself
 
+## colour pallette
+
+pal <- c("green2", "orange2", "purple3")
 
 ## just update name of data item, and replace SPAQ_GSS with required variable
 
