@@ -48,26 +48,26 @@ ggplot(data = df_updated,
     alpha = .3,
     position = position_jitter(seed = 1, width = .12)
   ) + 
-  # stat_summary(  #uncomment to provide median value
-  #   geom = "text",
-  #   fun = "median",
-  #   aes(label = round(after_stat(y), 2),
-  #       color = stage(study_group_info, after_scale = darken(color, .1, space = "HLS"))),
-  #   family = "Roboto Mono",
-  #   fontface = "bold",
-  #   size = 6.5,
-  #   vjust = v_height
-  # ) +
-  # stat_summary(  # uncomment to provide n
-  #   geom = "text",
-  #   fun.data = add_sample,
-  #   aes(label = paste("n =", after_stat(label)),
-  #       color = stage(study_group_info, after_scale = darken(color, .1, space = "HLS"))),
-  #   family = "Roboto Condensed",
-  #   size = 4,
-  #   hjust = -0.2,
-  #   vjust = -2.5
-  # ) +
+  stat_summary(  #uncomment to provide median value
+    geom = "text",
+    fun = "median",
+    aes(label = round(after_stat(y), 2),
+        color = stage(study_group_info, after_scale = darken(color, .1, space = "HLS"))),
+    family = "Roboto Mono",
+    fontface = "bold",
+    size = 6.5,
+    vjust = v_height
+  ) +
+  stat_summary(  # uncomment to provide n
+    geom = "text",
+    fun.data = add_sample,
+    aes(label = paste("n =", after_stat(label)),
+        color = stage(study_group_info, after_scale = darken(color, .1, space = "HLS"))),
+    family = "Roboto Condensed",
+    size = 4,
+    hjust = -0.2,
+    vjust = -2.5
+  ) +
   coord_flip(
     #xlim = c(1.2, NA), clip = "off"
   ) +
